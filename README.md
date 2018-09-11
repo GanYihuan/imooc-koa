@@ -11,6 +11,7 @@ npm i co -D
 npm i node-fetch -D
 npm i babel-cli babel-preset-env -D
 npm i koa -S
+npm i koa-session -S
 ```
 
 ## koa
