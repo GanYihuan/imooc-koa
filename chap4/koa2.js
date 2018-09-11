@@ -6,6 +6,12 @@ const indent = n => {
 	return new Array(n).join('&nbsp;')
 }
 
+// 简写两次 async 语法
+// const mid1 () => async(ctx, next) => {
+//   ctx.body = `<h3>request => first midleware</h3>`
+// 		await next()
+// 		ctx.body += `<h3>response <= first midleware</h3>`
+// }
 const mid1 = () => {
 	return async (ctx, next) => {
 		ctx.body = `<h3>request => first midleware</h3>`
