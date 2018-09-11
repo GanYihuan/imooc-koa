@@ -1,0 +1,48 @@
+const arrow = function(param) {}
+
+const arrow2 = param => {}
+
+const arrow3 = param => console.log(param)
+
+const arrow4 = param => ({ param: param })
+
+const arrow5 = (param1, param2) => {}
+
+// {id:1, movie: xxx}
+const arrow6 = ({ id, movie }) => {
+	console.log(id, movie)
+}
+
+const luke = {
+	id: 2,
+	say: function() {
+		setTimeout(function() {
+			// undefined
+			console.log('id:', this.id)
+		}, 50)
+	},
+	sayWithThis: function() {
+		let _this = this
+		setTimeout(function() {
+			// 2
+			console.log('this id: ', _this.id)
+		}, 500)
+	},
+	sayWithArrow: function() {
+		setTimeout(() => {
+			// this point current arrowfunc defined action scope
+			// 2
+			console.log('arrow id: ', this.id)
+		}, 1500)
+	},
+	sayWithGlobalArrow: () => {
+		setTimeout(() => {
+			// undefined
+			console.log('global arrow id: ', this.id)
+		}, 2000)
+	}
+}
+luke.say()
+luke.sayWithThis()
+luke.sayWithArrow()
+luke.sayWithGlobalArrow()
