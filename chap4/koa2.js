@@ -30,7 +30,9 @@ const mid3 = () => {
 	}
 }
 
-app.use(convert(logger()))
+// koa1 需要兼容, koa-convert 实现
+// app.use(convert(logger()))
+app.use(logger())
 app.use(mid1())
 app.use(mid2())
 app.use(mid3())

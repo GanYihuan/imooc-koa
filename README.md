@@ -27,4 +27,5 @@ npm i fanyi -g
 npm i koa@1.2.0 koa-logger@1.3.0 -S
 npm i koa-convert@1.2.0 -S
 npm i koa@2.4.1 -S
+npm i koa-logger -S
 ```
