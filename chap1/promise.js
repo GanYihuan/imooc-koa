@@ -11,7 +11,6 @@ const fs = require('fs')
 // 		})
 // 	})
 // }
-
 // readFileAsync('package.json')
 // 	.then(data => {
 // 		data = JSON.parse(data)
@@ -21,6 +20,8 @@ const fs = require('fs')
 // 		console.log(err)
 // 	})
 
+// optimize upon code
+// package callback func api
 const util = require('util')
 util
 	.promisify(fs.readFile)('./package.json')
