@@ -22,7 +22,9 @@
 // console.log(it.next().value)
 // console.log(it.next().done)
 
-// generator, optimize upon code
+/**
+ * generator, optimize upon code
+ */
 function* makeIterator(arr) {
 	for (let i = 0; i < arr.length; i++) {
     // yield: sync complete async act
