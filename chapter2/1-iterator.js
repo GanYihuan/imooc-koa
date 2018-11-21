@@ -1,26 +1,26 @@
-// function makeIterator(arr) {
-// 	let nextIndex = 0
-// 	return {
-//     // return result object
-// 		next: () => {
-// 			if (nextIndex < arr.length) {
-// 				return {
-// 					value: arr[nextIndex++],
-// 					done: false
-// 				}
-// 			} else {
-// 				return {
-// 					done: true
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// const it = makeIterator(['eat', 'play', 'sleep'])
-// console.log(it.next().value)
-// console.log(it.next().value)
-// console.log(it.next().value)
-// console.log(it.next().done)
+function makeIterator(arr) {
+	let nextIndex = 0
+	return {
+    // return result object
+		next: () => {
+			if (nextIndex < arr.length) {
+				return {
+					value: arr[nextIndex++],
+					done: false
+				}
+			} else {
+				return {
+					done: true
+				}
+			}
+		}
+	}
+}
+const it = makeIterator(['eat', 'play', 'sleep'])
+console.log(it.next().value)
+console.log(it.next().value)
+console.log(it.next().value)
+console.log(it.next().done)
 
 /**
  * generator, optimize upon code
