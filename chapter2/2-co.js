@@ -17,7 +17,7 @@ function run(generator) {
     })
   })
 }
-run(function* () {
+run(function*() {
   // yield: process stop, return current status, sync complete async act
   const res = yield fetch('https://api.douban.com/v2/movie/1291843')
   const movie = yield res.json()
@@ -26,9 +26,10 @@ run(function* () {
 })
 
 /**
+ * co: transform to promise
  * can't call string, boolean
  */
-co(function* () {
+co(function*() {
   // yield: process stop, return current status, sync complete async act
   // fetch(): fetching a resource from the network
   const res = yield fetch('https://api.douban.com/v2/movie/1291843')

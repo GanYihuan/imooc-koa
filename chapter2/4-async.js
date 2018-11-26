@@ -49,7 +49,7 @@ const co = require('co')
 const fs = require('fs')
 const util = require('util')
 
-co(function* () {
+co(function*() {
   let data = yield util.promisify(fs.readFile)('./package.json')
   data = JSON.parse(data)
   console.log(data.name)
