@@ -1,7 +1,8 @@
-﻿import { name } from './export'
-import { getName } from './ext'
+﻿// import { name } from './export'
+// import { getName } from './export'
 // import { name, getName } from './export'
-import age from './export'
+// import age from './export' // export default age
+// import * as qs from 'querystring'
 import {
   name as name3,
   getName2 as getName3,

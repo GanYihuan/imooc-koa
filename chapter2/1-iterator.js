@@ -1,7 +1,6 @@
 // function makeIterator(arr) {
 //   let nextIndex = 0
 //   return {
-//     // return result object
 //     next: () => {
 //       if (nextIndex < arr.length) {
 //         return {
@@ -22,6 +21,7 @@
 // console.log(it.next().value)
 // console.log(it.next().done)
 
+
 /**
  * generator, optimize upon code
  */
@@ -31,7 +31,6 @@ function* makeIterator(arr) {
     yield arr[i]
   }
 }
-
 const it = makeIterator(['eat', 'play', 'sleep'])
 console.log(it.next().value)
 console.log(it.next().value)

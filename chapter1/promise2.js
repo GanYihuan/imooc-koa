@@ -1,6 +1,7 @@
-const fs = require('fs')
 const util = require('util')
-const readAsync = util.promisify(fs.readFile) // package callback func api
+const fs = require('fs')
+// package callback func api
+const readAsync = util.promisify(fs.readFile)
 
 /**
  * sync complete async act

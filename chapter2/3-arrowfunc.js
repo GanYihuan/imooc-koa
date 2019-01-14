@@ -1,18 +1,12 @@
 const arrow = function(param) {}
-
 const arrow2 = param => {}
-
 const arrow3 = param => console.log(param)
-
 const arrow4 = param => ({ param: param })
-
 const arrow5 = (param1, param2) => {}
-
 // { id:1, movie:xxx }
 const arrow6 = ({ id, movie }) => {
   console.log(id, movie)
 }
-
 const luke = {
   id: 2,
   say: function() {
@@ -21,9 +15,9 @@ const luke = {
     }, 50)
   },
   sayWithThis: function() {
-    let _this = this
+    let that = this
     setTimeout(function() {
-      console.log('this id: ', _this.id) // 2
+      console.log('this id: ', that.id) // 2
     }, 500)
   },
   sayWithArrow: function() {

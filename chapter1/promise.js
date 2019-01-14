@@ -23,12 +23,11 @@ const fs = require('fs')
 
 /**
  * optimize upon code
- * package callback func api
  */
 const util = require('util')
 
 util
-  .promisify(fs.readFile)('./package.json')
+  .promisify(fs.readFile)('./../package.json')
   .then(JSON.parse)
   .then(data => {
     console.log(data.name)
